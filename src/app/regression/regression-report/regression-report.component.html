@@ -1,0 +1,14 @@
+<div class="text-xs-center" *ngIf="jsonObj != undefined">
+  <h1>{{jsonObj.title}}</h1>
+  <h2> {{jsonObj.result}}</h2>
+</div>
+<h1 style="text-align: center;" *ngIf="jsonObj == undefined">JSON DATA is NULL</h1>
+
+<table class="table  table-bordered" *ngIf="jsonObj != undefined">
+  <tr [ngClass]="setClasses(item.role_result)" *ngFor="let item of jsonObj.role_list">
+    <td>{{item.role_name}}</td>
+    <td>{{item.role_result}}</td>
+  </tr>
+</table>
+
+

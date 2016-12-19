@@ -1,0 +1,17 @@
+<form class="form-inline">
+  <div class="form-group ">
+    <label for="exampleInputFile">Report Result File</label>
+    <input type="file" id="exampleInputFile">
+  </div>
+  <button type="submit" class="btn btn-default btn-sm">Upload</button>
+</form>
+<hr>
+
+
+<label for="exampleInputFile">Paste Result Data</label>
+<textarea class="form-control" rows="3" [(ngModel)]="report_json"></textarea>
+
+<button (click)="setReportJsonText()" class="btn btn-default btn-sm">Upload</button>
+
+
+<pre>{{report_json}}</pre>
