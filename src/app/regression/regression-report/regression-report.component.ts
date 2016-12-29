@@ -25,9 +25,6 @@ export class RegressionReportComponent implements OnInit {
   ngOnInit() {
   }
 
-  getReportJson() {
-    this.report_json= this.regression_service.getReportJson();
-  }
 
   setClasses(result:string){
     if (result == 'SUCCESS'){

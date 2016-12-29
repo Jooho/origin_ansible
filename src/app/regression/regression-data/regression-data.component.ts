@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {RegressionService} from "../regression-service.service";
 
 @Component({
@@ -7,13 +7,20 @@ import {RegressionService} from "../regression-service.service";
 })
 export class RegressionDataComponent implements OnInit {
 
-  private report_json: string="";
-  constructor(private regression_service:RegressionService) { }
+  private report_json: string = "";
+
+  constructor(private regression_service: RegressionService) {
+  }
 
   ngOnInit() {
   }
-  setReportJsonText(){
+
+  setReportJsonText() {
 
     this.regression_service.setReportJsonText(this.report_json);
+  }
+
+  uploadReportJsonFile(file : any) {
+
   }
 }

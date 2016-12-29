@@ -1,9 +1,10 @@
 <form class="form-inline">
   <div class="form-group ">
     <label for="exampleInputFile">Report Result File</label>
-    <input type="file" id="exampleInputFile">
+    <input type="file" id="exampleInputFile" #j>
   </div>
-  <button type="submit" class="btn btn-default btn-sm">Upload</button>
+  <button type="button"
+          class="btn btn-default btn-sm" (click)="uploadReportJsonFile(j.value)" >Upload</button>
 </form>
 <hr>
 
